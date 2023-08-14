@@ -2,10 +2,13 @@
 <?xml-stylesheet type="text/css" href="styles.css"?>
 <svg id="Layer_1" data-name="Layer 1" class="cloud draw-clouds fill-clouds" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 243.96 81.36">
   <defs>
-  <clipPath id="myClip2">
-      <circle cx="80" cy="80" r="40" />
-      <circle cx="60" cy="60" r="40" />
-    </clipPath>
+   <linearGradient id="Gradient">
+      <stop offset="0" stop-color="black" />
+      <stop offset="1" stop-color="white" />
+    </linearGradient>
+    <mask id="Mask">
+      <rect x="0" y="0" width="200" height="200" fill="url(#Gradient)" />
+    </mask>
     <style>
       .cls-1 {
         fill: #f2f7f8;

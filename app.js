@@ -27,7 +27,12 @@ const submitButton = document.querySelector(".submit");
 const notesPendingEl = document.querySelector("#notes-pending");
 const charCounter = document.querySelector("#char-counter");
 const noteLimitWarning = document.querySelector("#note-limit-warning");
+const propeller = document.querySelector(".blimp-propeller");
+const blimp = document.querySelector(".blimp");
 // const sortButton = document.querySelector(".sort-button");
+
+const localStorageKey = "noteList";
+let noteList = JSON.parse(localStorage.getItem(localStorageKey)) || [];
 
 const maxNoteCount = 5;
 
@@ -82,9 +87,6 @@ window.addEventListener("keypress", function (event) {
   }
 });
 
-const localStorageKey = "noteList";
-let noteList = JSON.parse(localStorage.getItem(localStorageKey)) || [];
-
 function updateLocalStorage() {
   localStorage.setItem(localStorageKey, JSON.stringify(noteList));
 }
@@ -112,7 +114,6 @@ function createNoteHtml(note) {
 
   removeButton.addEventListener("click", function () {
     const cloudContainer = this.parentElement.parentElement;
-    const noteText = cloudContainer.getAttribute("data-note");
     const noteId = note.id;
     notesPendingEl.removeChild(cloudContainer);
     removeNoteFromList(noteId);
@@ -148,3 +149,8 @@ function handleForm(event) {
 
 const form = document.querySelector("form");
 form.addEventListener("submit", handleForm);
+
+blimp.addEventListener("click", function () {
+  propeller.style.animation = "dropProp 1s ease-out forwards";
+  blimp.style.animation = "getLost 1.3s ease-out forwards";
+});
