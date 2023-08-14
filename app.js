@@ -90,6 +90,7 @@ window.addEventListener("keypress", function (event) {
       submitButton.style.animation = "";
     }, 200);
   }
+  charCounter.textContent = "";
 });
 
 function updateLocalStorage() {
