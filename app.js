@@ -29,6 +29,7 @@ const charCounter = document.querySelector("#char-counter");
 const noteLimitWarning = document.querySelector("#note-limit-warning");
 const propeller = document.querySelector(".blimp-propeller");
 const blimp = document.querySelector(".blimp");
+const h1 = document.querySelector("#title");
 // const sortButton = document.querySelector(".sort-button");
 
 const localStorageKey = "noteList";
@@ -84,6 +85,10 @@ window.addEventListener("keypress", function (event) {
   if (event.keyCode === 13) {
     event.preventDefault();
     createNote();
+    submitButton.style.animation = "click .2s ease-in-out";
+    setTimeout(() => {
+      submitButton.style.animation = "";
+    }, 200);
   }
 });
 
@@ -154,4 +159,5 @@ form.addEventListener("submit", handleForm);
 blimp.addEventListener("click", function () {
   propeller.style.animation = "dropProp 1s ease-out forwards";
   blimp.style.animation = "getLost 1.3s ease-out forwards";
+  h1.style.animation = "pumpHead 1s forwards";
 });
