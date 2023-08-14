@@ -129,6 +129,7 @@ function createNoteHtml(note) {
   const cloudVariant = clouds[cloudIndex % clouds.length].variant;
   const cloudImage = new Image();
   cloudImage.src = cloudVariant;
+  cloudImage.alt = "cloud";
 
   cloudContainer.appendChild(cloudImage);
   cloudContainer.appendChild(noteDiv);
