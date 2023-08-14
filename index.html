@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src=""></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="shortcut icon"
+      href="./icons8-lightbulb-16.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amita&family=Limelight&family=Noto+Music&family=Tektur&display=swap"
+      rel="stylesheet"
+    />
+    <script src="app.js" defer></script>
+    <title>Take note of your 5 best ideas</title>
+  </head>
+  <body>
+    <div class="blimp-container">
+      <div>
+        <img src="./blimp.svg" class="blimp" alt="" />
+      </div>
+      <h1>Cloudea</h1>
+      <div>
+        <img src="./bpoop.webp" class="blimp-propeller" alt="" />
+      </div>
+    </div>
+    <div id="char-counter"></div>
+    <p id="note-limit-warning" class="warning-message"></p>
+    <div class="form">
+      <div class="wrap">
+        <form action="input">
+          <textarea
+            name=""
+            id="notepad"
+            maxlength="100"
+            cols="1"
+            rows="1"
+            placeholder="Input thoughts here"
+            contenteditable
+          ></textarea>
+        </form>
+      </div>
+      <div><button class="submit">Annotate</button></div>
+    </div>
+    <div class="clouds">
+      <div id="notes-pending"></div>
+    </div>
+  </body>
+</html>
