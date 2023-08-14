@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg id="Layer_1" data-name="Layer 1" class="cloud draw-clouds fill-clouds" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 183.25 92.24">
   <defs>
+  <clipPath id="myClip6">
+      <circle cx="100" cy="100" r="40" />
+      <circle cx="60" cy="60" r="40" />
+    </clipPath>
     <style>
       .cls-1 {
         fill: #e9f4f6;
