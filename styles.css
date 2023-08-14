@@ -203,6 +203,9 @@ h1 {
   cursor: pointer;
   animation: scale 0.15s ease-in-out;
 }
+.submit:active {
+  animation: click 0.2s ease-in-out;
+}
 .wrap {
   position: relative;
   display: inline-block;
@@ -323,6 +326,17 @@ h1 {
     transform: scale(0.2) scaleY(0.1) scaleZ(1.3) rotate(-0.6turn)
       translateX(-100vw) translateY(100vh);
     filter: opacity(0);
+  }
+}
+@keyframes click {
+  100% {
+    transform: translateY(4px);
+    filter: saturate(1.5);
+  }
+}
+@keyframes pumpHead {
+  100% {
+    font-size: 6rem;
   }
 }
 @media (max-width: 1350px) {
