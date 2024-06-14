@@ -61,6 +61,7 @@ function createNote() {
     createNoteHtml(note);
 
     notepadEl.value = "";
+    notepadEl.style.height = "auto";
     noteLimitWarning.textContent = "";
   }
 }
@@ -151,6 +152,7 @@ function handleForm(event) {
   if (noteText !== "") {
     createNote();
     notepadEl.value = "";
+    notepadEl.style.height = "auto";
   }
 }
 
@@ -158,7 +160,7 @@ const form = document.querySelector("form");
 form.addEventListener("submit", handleForm);
 
 blimp.addEventListener("click", function () {
-  propeller.style.animation = "dropProp 1s ease-out forwards";
+  propeller.style.animation = "dropProp .6s ease-out forwards";
   blimp.style.animation = "getLost 1.3s ease-out forwards";
   h1.style.animation = "pumpHead 1s forwards";
 });
