@@ -49,22 +49,7 @@ h1 {
   height: 160%;
   filter: drop-shadow(0.2rem 0.2rem 0.4rem rgb(42, 54, 126, 0.5));
 }
-/* .plane {
-  position: relative;
-  width: 5rem;
-  margin-top: 2rem;
-  transform: translateX(-55vw);
-  animation: flyBy 8s linear;
-}
-.propeller {
-  position: absolute;
-  width: 1rem;
-  margin-top: 2rem;
-  top: 53%;
-  transform: translateX(-55vw);
-  transform-origin: center;
-  animation: rotate 8s linear infinite;
-} */
+
 #notepad {
   margin-right: 1rem;
   border-style: hidden;
@@ -107,28 +92,7 @@ h1 {
   padding: 0.2rem 1rem;
   border-radius: 1rem;
 }
-.cloud-container {
-  display: grid;
-  grid-template-columns: repeat(1 1fr);
-  align-items: center;
-  align-content: center;
-  justify-items: center;
-  margin-top: 2rem;
-  width: 50rem;
-  filter: drop-shadow(0.2rem 0.2rem 0.4rem rgb(42, 54, 126, 0.5));
-  animation: position 18s forwards infinite;
-}
-/* .cloud-container {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  margin-bottom: 5rem;
-  width: 50rem;
-  filter: drop-shadow(0.2rem 0.2rem 0.4rem rgb(42, 54, 126, 0.5));
-  animation: position 18s forwards infinite;
-} */
+
 .cloud-container:nth-child(1) {
   animation-delay: 0.2s;
 }
@@ -156,34 +120,6 @@ h1 {
   color: rgba(240, 240, 240, 0.421);
 }
 
-.note {
-  /* clip-path: url(#myClip1), url(#myClip2), url(#myClip3), url; */
-  position: absolute;
-  top: 8.5rem;
-  max-width: 45%;
-  text-align: center;
-  white-space: wrap;
-  text-overflow: ellipsis;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.1rem;
-  font-weight: bolder;
-  color: rgb(1, 75, 100);
-  text-shadow: 0.5px 0.5px black, 1px 1px 3px rgb(0, 213, 255, 0.7);
-  letter-spacing: 0.1rem;
-}
-.x {
-  position: relative;
-  color: rgb(150, 0, 0);
-  text-shadow: 0.5px 0.5px black, 1px 1px 3px rgba(255, 0, 0, 0.7);
-  display: inline;
-  vertical-align: top;
-  font-size: 5rem;
-  border-style: none;
-  background: none;
-  font-weight: bolder;
-  top: -6rem;
-  right: -15rem;
-}
 .x:hover {
   cursor: pointer;
 }
@@ -234,18 +170,7 @@ h1 {
   bottom: 1px;
   pointer-events: none;
 }
-/* @keyframes drawClouds {
-  to {
-    stroke-dashoffset: 350;
-    stroke-dasharray: 350;
-  }
-}
 
-@keyframes fillClouds {
-  to {
-    fill-opacity: 1;
-  }
-} */
 @keyframes transform-header {
   0% {
     scale: 0.98;
@@ -257,27 +182,6 @@ h1 {
     filter: brightness(1.02);
   }
 }
-/* @keyframes flyBy {
-  0% {
-    transform: translateX(-55vw) scale(0.1) rotate(0) translateY(0);
-  }
-
-  43% {
-    transform: rotate(-1deg) translateY(0.01rem);
-  }
-
-  50% {
-    transform: rotate(-360deg) translateY(1rem);
-  }
-  100% {
-    transform: translateX(48.5vw) scale(0.4) rotate(0) translateY(0);
-  }
-} */
-/* @keyframes rotate {
-  100% {
-    transform: rotate(100turn);
-  }
-} */
 
 @keyframes movement {
   0% {
@@ -322,7 +226,7 @@ h1 {
     filter: opacity(1);
   }
   100% {
-    transform: translateY(300vh);
+    transform: translateY(100vh);
     filter: opacity(0);
   }
 }
@@ -577,4 +481,70 @@ h1 {
     min-width: 8rem;
     max-width: 12rem;
   }
+}
+.note p {
+  margin: 0;
+  padding: 5px;
+  overflow: hidden;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+.note {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cloud-container {
+  position: relative;
+  display: inline-block;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  margin-top: 2rem;
+  width: 50rem;
+  filter: drop-shadow(0.2rem 0.2rem 0.4rem rgb(42, 54, 126, 0.5));
+  animation: position 18s forwards infinite;
+}
+
+.cloud-container img {
+  display: block;
+  max-width: 100%;
+}
+
+.note {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  width: 70%;
+  max-height: 80%;
+  text-align: center;
+  white-space: wrap;
+  text-overflow: ellipsis;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  color: rgb(1, 75, 100);
+  text-shadow: 0.5px 0.5px black, 1px 1px 3px rgb(0, 213, 255, 0.7);
+  letter-spacing: 0.1rem;
+}
+
+.x {
+  position: absolute;
+  top: 5rem;
+  right: 15rem;
+  background: none;
+  border: none;
+  font-size: 2.8rem;
+  cursor: pointer;
+  color: rgb(150, 0, 0);
+  text-shadow: 0.5px 0.5px black, 1px 1px 3px rgba(255, 0, 0, 0.7);
+}
+
+.clouds {
+  margin-left: 7rem;
 }
