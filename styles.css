@@ -358,7 +358,10 @@ h1 {
   }
   #char-counter {
     width: 2rem;
-    height: 0.6rem;
+    height: 0.8rem;
+    font-size: 1rem;
+    min-width: 2rem;
+    width: fit-content;
   }
   .warning-message {
     width: 2rem;
@@ -537,6 +540,11 @@ h1 {
   .cloud-container img {
     width: 25rem;
     scale: 1.2;
+  }
+  #char-counter {
+    font-size: 0.7rem;
+    min-width: 2rem;
+    width: fit-content;
   }
   #notepad {
     border-radius: 1.2rem;
